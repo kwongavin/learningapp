@@ -12,7 +12,7 @@ struct _Gavin__Learning_App: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
-                .environmentObject(ContenModel())
+                .environmentObject(ContentModel())
         }
     }
 }

@@ -7,9 +7,18 @@
 
 import Foundation
 
-class ContenModel: ObservableObject {
+class ContentModel: ObservableObject {
     
+    // List of Modules
     @Published var modules = [Module]()
+    
+    // Current Modules
+    @Published var currentModule: Module?
+    var currentModuleIndex = 0
+    
+    // Current Lesson
+    @Published var currentLesson: Lesson?
+    var currentLessonIndex = 0
     
     var styleData: Data?
     
@@ -18,6 +27,8 @@ class ContenModel: ObservableObject {
         getLocalData()
         
     }
+    
+    // MARK: - Data Methods
     
     func getLocalData() {
         
@@ -53,6 +64,55 @@ class ContenModel: ObservableObject {
             print("Couldn't parse style data")
         }
         
+    }
+    
+    // MARK: Module navigation methods
+    
+    func beginModule(_ moduleId: Int) {
+        
+        // find the index for this module id
+        for index in 0..<modules.count {
+            if modules[index].id == moduleId {
+                
+                // Found the matching module
+                currentModuleIndex = index
+                break
+            }
+        }
+        
+        // Set the current module
+        currentModule = modules[currentModuleIndex]
+    }
+    
+    func beginLesson(_ lessonIndex: Int) {
+        
+        if lessonIndex < currentModule!.content.lessons.count {
+            currentLessonIndex = lessonIndex
+        }
+        else {
+            currentLessonIndex = 0
+        }
+        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        
+    }
+    
+    func nextLesson() {
+        
+        currentLessonIndex += 1
+        
+        if currentLessonIndex < currentModule!.content.lessons.count {
+            
+            currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        }
+        else {
+            currentLessonIndex = 0
+            currentLesson = nil
+        }
+    }
+    
+    func hasNextLesson() -> Bool {
+        
+        return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
     }
     
 }
