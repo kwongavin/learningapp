@@ -21,6 +21,8 @@
 		8659D8AF29B94801007E7D6B /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659D8AE29B94801007E7D6B /* ContentDetailView.swift */; };
 		8659D8B229B94B16007E7D6B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8659D8B129B94B16007E7D6B /* AVKit.framework */; };
 		8659D8B429B94F62007E7D6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659D8B329B94F62007E7D6B /* Constants.swift */; };
+		8659D8DD29BA8075007E7D6B /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659D8DC29BA8075007E7D6B /* CodeTextView.swift */; };
+		8659D8FB29BAFDFE007E7D6B /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659D8FA29BAFDFE007E7D6B /* RectangleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		8659D8AE29B94801007E7D6B /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		8659D8B129B94B16007E7D6B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		8659D8B329B94F62007E7D6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8659D8DC29BA8075007E7D6B /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
+		8659D8FA29BAFDFE007E7D6B /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				8659D8AA29B90991007E7D6B /* ContentView.swift */,
 				8659D8AC29B9138C007E7D6B /* ContentViewRow.swift */,
 				8659D8AE29B94801007E7D6B /* ContentDetailView.swift */,
+				8659D8DC29BA8075007E7D6B /* CodeTextView.swift */,
+				8659D8FA29BAFDFE007E7D6B /* RectangleCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,8 +230,10 @@
 				8659D8AF29B94801007E7D6B /* ContentDetailView.swift in Sources */,
 				8659D88E29B5BDA1007E7D6B /* _Gavin__Learning_App.swift in Sources */,
 				8659D8AD29B9138C007E7D6B /* ContentViewRow.swift in Sources */,
+				8659D8DD29BA8075007E7D6B /* CodeTextView.swift in Sources */,
 				8659D8A129B5BE4D007E7D6B /* ContentModel.swift in Sources */,
 				8659D8A729B6FE8E007E7D6B /* Models.swift in Sources */,
+				8659D8FB29BAFDFE007E7D6B /* RectangleCard.swift in Sources */,
 				8659D8B429B94F62007E7D6B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
